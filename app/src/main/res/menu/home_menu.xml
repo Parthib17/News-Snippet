@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/about_us"
+        android:title="About Us">
+    </item>
+    <item
+        android:title="refresh"
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_baseline_refresh_24"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100">
+    </item>
+</menu>

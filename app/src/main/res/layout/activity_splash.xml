@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky"
+    tools:context=".splashActivity">
+
+    <ImageView
+        android:id="@+id/spImg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/lomgo2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spImg"
+        android:layout_marginTop="3dp"
+        android:text="@string/app_name"
+        android:fontFamily="@font/roboto1"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:padding="4dp"
+        android:id="@+id/spText"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spText"
+        android:layout_marginTop="18dp"
+        android:id="@+id/spProgress"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spProgress"
+        android:layout_marginTop="150dp"
+        android:text="Developed By"
+        android:fontFamily="@font/roboto1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:id="@+id/spCredit"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spCredit"
+        android:layout_marginTop="10dp"
+        android:text="PARTHIB MITRA"
+        android:fontFamily="@font/roboto1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:id="@+id/spCreditName"/>
+
+
+
+
+
+
+</RelativeLayout>
