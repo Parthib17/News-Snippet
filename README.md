@@ -7,7 +7,8 @@ News Summarization Android Application using NLP
 
 ●	Implemented news bookmark feature using Room Database and Firebase database to authenticate the users.
 
-●	Tech: Android Studio, Java, Python, Spacy, Chaquopy, retrofit for API call, Firebase , Room Database.
+●	Technology used: Android Studio, Java, Python, Spacy, Chaquopy, retrofit for API call, Firebase , Room Database.
+
 
 # Login & Sign Up
 
