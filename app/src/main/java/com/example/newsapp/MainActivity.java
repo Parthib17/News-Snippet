@@ -1,13 +1,20 @@
 package com.example.newsapp;
 
+import androidx.annotation.GravityInt;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,32 +22,60 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
 import com.example.newsapp.Models.NewsApiResponse;
 import com.example.newsapp.Models.NewsHeadlines;
+import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements SelectListener, View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements SelectListener, View.OnClickListener {
 
     RecyclerView recyclerView;
     CustomAdapter adapter;
-    Button b1,b2,b3,b4,b5,b6,b7;
+    Button b1, b2, b3, b4, b5, b6, b7;
     SearchView searchView;
     String category;
+    ShimmerFrameLayout shimmerFrameLayout;
+    FirebaseAuth auth;
+    FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        searchView=findViewById(R.id.search_view);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.black));
+        }
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        if (user == null) {
+            Intent intent = new Intent(getApplicationContext(), login.class);
+            startActivity(intent);
+            finish();
+        } else {
+
+        }
+        searchView = findViewById(R.id.search_view);
+        recyclerView = findViewById(R.id.recycler_main);
+        shimmerFrameLayout = findViewById(R.id.shimmer);
+        shimmerFrameLayout.startShimmer();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
 
                 RequestManager manager = new RequestManager(MainActivity.this);
-                manager.getNewsHeadlines(listener,category ,query);
+                manager.getNewsHeadlines(listener, category, query);
                 return true;
             }
 
@@ -78,7 +113,10 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
             if(list.isEmpty()){
                 Toast.makeText(MainActivity.this, "No data found", Toast.LENGTH_SHORT).show();
             }
-            else{
+            else {
+                shimmerFrameLayout.stopShimmer();
+                shimmerFrameLayout.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
                 showNews(list);
 
             }
@@ -87,12 +125,11 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
 
         @Override
         public void onError(String message) {
-            Toast.makeText(MainActivity.this, "Please Check Your Internet Connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
         }
     };
 
     private void showNews(List<NewsHeadlines> list) {
-        recyclerView=findViewById(R.id.recycler_main);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this,1));
         adapter= new CustomAdapter(this, list,this);
@@ -122,14 +159,30 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.refresh:
+        switch (item.getItemId()) {
 
-                break;
             case R.id.about_us:
-                startActivity(new Intent(MainActivity.this,AboutUs.class));
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+                break;
+
+            case R.id.sign_out:
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), login.class);
+                startActivity(intent);
+                finish();
+                break;
+
+            case R.id.summarizer:
+                startActivity(new Intent(MainActivity.this, Summarizer.class));
+                break;
+
+
+            case R.id.favourite:
+                startActivity(new Intent(MainActivity.this, Favourite.class));
                 break;
         }
+
         return super.onOptionsItemSelected(item);
     }
+
 }

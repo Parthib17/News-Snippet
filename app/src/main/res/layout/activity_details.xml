@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".detailsView">
 
     <ScrollView
         android:layout_width="match_parent"
+        android:scrollbars="none"
         android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
@@ -17,6 +19,7 @@
             <androidx.cardview.widget.CardView
                 app:cardElevation="8dp"
                 android:layout_margin="8dp"
+                app:cardCornerRadius="14dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -26,12 +29,12 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/text_detail_title"
+                        android:justificationMode="inter_word"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:textSize="22sp"
+                        android:textSize="21sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
                     </TextView>
                     <ImageView
                         android:id="@+id/img_detail_news"
@@ -42,29 +45,47 @@
                         android:layout_height="200dp">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/text_detail_author"
                         android:textSize="16sp"
                         android:layout_marginTop="6dp"
-                        android:textColor="@color/teal_200">
+                        android:textColor="@color/purple_200">
 
                     </TextView>
-                    <TextView
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/text_detail_time"
-                        android:textSize="16sp"
-                        android:layout_marginTop="6dp"
-                        android:textColor="@color/black">
+                        android:layout_height="wrap_content">
 
-                    </TextView>
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/text_detail_time"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/addToFav"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_toRightOf="@id/text_detail_time"
+                            android:src="@drawable/ic_baseline_favorite_24" />
+                    </RelativeLayout>
+
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardElevation="8dp"
             android:layout_margin="8dp"
+            app:cardCornerRadius="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <LinearLayout
@@ -72,37 +93,78 @@
             android:layout_margin="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SUMMARY: "
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:layout_marginTop="6dp"
-                android:textColor="@color/teal_700">
+                android:textColor="@color/purple_200">
 
             </TextView>
+
             <TextView
                 android:id="@+id/text_detail_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
+                android:justificationMode="inter_word"
                 android:textColor="@color/black"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NEWS SENTIMENT: "
+                    android:textColor="@color/teal_700"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/sentiment_icon"
+                    android:layout_width="18dp"
+                    android:visibility="invisible"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="156dp" />
+
+                <TextView
+                    android:id="@+id/sentiment_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/sentiment_icon"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
             <Button
                 android:id="@+id/read_more"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:text="Click Here For Full Aricle"
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </Button>
-        </LinearLayout></androidx.cardview.widget.CardView>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>

@@ -1,6 +1,7 @@
 package com.example.newsapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.newsapp.Models.NewsApiResponse;
@@ -21,19 +22,22 @@ public class RequestManager {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
-    public void getNewsHeadlines(OnFetchDataListener listener,String category, String query)
-    {
+    public void getNewsHeadlines(OnFetchDataListener listener,String category, String query) {
+
         CallNewsApi callNewsApi = retrofit.create(CallNewsApi.class);
-        Call<NewsApiResponse> call = callNewsApi.callHeadlines("in", category,query,context.getString(R.string.api_key));
+        Call<NewsApiResponse> call = callNewsApi.callHeadlines("in", category, query, context.getString(R.string.api_key));
+        //Log.i("hello",category);
 
         try {
             call.enqueue(new Callback<NewsApiResponse>() {
                 @Override
                 public void onResponse(Call<NewsApiResponse> call, Response<NewsApiResponse> response) {
-                    if (!response.isSuccessful()){
-                        Toast.makeText(context, "Error Occurred", Toast.LENGTH_SHORT).show();
+                    if (!response.isSuccessful()) {
+                        Toast.makeText(context, "Check your internet connection", Toast.LENGTH_LONG).show();
                     }
                     listener.onFetchData(response.body().getArticles(), response.message());
+
+
                 }
 
                 @Override
@@ -54,6 +58,7 @@ public class RequestManager {
     public interface CallNewsApi{
         @GET("top-headlines")
         Call<NewsApiResponse> callHeadlines(
+                //@Query("sources") String sources,
                 @Query("country") String country,
                 @Query("category") String category,
                 @Query("q") String query,

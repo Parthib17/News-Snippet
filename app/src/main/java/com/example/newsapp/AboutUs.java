@@ -25,7 +25,8 @@ public class AboutUs extends AppCompatActivity {
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.infoo)
-                .setDescription("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                .setDescription("Hello, I'm Parhtib Mitra, the developer of this app. As a student of B.Sc Computer Science at Sammilani Mahavidyalaya, I have put my effort and passion into creating an app that provides efficient and insightful news summaries. \n" +
+                        "I have always been fascinated by technology and its potential to simplify our lives. With this app, my aim is to provide a seamless and convenient way for users to stay informed about current events. By leveraging my knowledge in programming and data analysis, I have incorporated features like article summarization and personalized favorites to enhance the user experience. I am committed to continuously improving the app to enhance your news reading experience.")
                 .addItem(new Element().setTitle("Version 1.0"))
                 .addGroup("CONNECT WITH US!")
                 .addEmail("parthibmitra1278@gmail.com")

@@ -4,13 +4,19 @@ import java.io.Serializable;
 
 public class NewsHeadlines implements Serializable {
     Source source = null;
-    String author="";
-    String title="";
-    String description="";
-    String url="";
-    String urlToImage="";
-    String publishedAt="";
-    String content="";
+    String author = "";
+    String title = "";
+    String description = "";
+
+    public NewsHeadlines(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    String url = "";
+    String urlToImage = "";
+    String publishedAt = "";
+    String content = "";
 
     public Source getSource() {
         return source;

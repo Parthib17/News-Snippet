@@ -1,18 +1,23 @@
-def main(url):
-    import spacy
-    import en_core_web_sm
-    from spacy.lang.en.stop_words import STOP_WORDS
-    from string import punctuation
-    from heapq import nlargest
-    import nltk
-    from newspaper import Article
+import spacy
+import en_core_web_sm
+from spacy.lang.en.stop_words import STOP_WORDS
+from string import punctuation
+from heapq import nlargest
+import nltk
+from newspaper import Article
+from textblob import TextBlob
 
-    article = Article(url)
+def main(url):
+    url1=url
+    article = Article(url1)
     article.download()
-    article.parse()
+    try:
+        article.parse()
+    except:
+        pass
     nltk.download('punkt')
     rawtext = article.text
-
+    original_len = len(rawtext.split())
     stopwords=list(STOP_WORDS)   #stop words
     #print(stopwords)
     nlp = en_core_web_sm.load()      #small module of spacy
@@ -51,12 +56,36 @@ def main(url):
                     sent_scores[sent]+=word_freq[word.text]
 
     # print(sent_scores)
-    select_len =int(len(sen_tokens)*0.2)
+    if original_len >1199:
+        select_len =int(len(sen_tokens)*0.05)
+    elif original_len<1200 and original_len>799:
+        select_len =int(len(sen_tokens)*0.08)
+    elif original_len<800 and original_len>499:
+        select_len =int(len(sen_tokens)*0.15)
+    elif original_len<500 and original_len>199:
+        select_len =int(len(sen_tokens)*0.30)
+    elif original_len <200:
+        select_len =int(len(sen_tokens)*0.50)
+    else:
+        select_len =int(len(sen_tokens)*0.20)
+
     summary = nlargest(select_len, sent_scores, key=sent_scores.get)
     final_summary = [word.text for word in summary]
     summary =' '.join(final_summary)
-    summary1=summary.replace('\n',' ')
-    return summary1
+    summary10=summary.replace('\n',' ')
+    summary11=summary10.replace('ADVERTISEMENT',' ')
+    summary111=summary11.replace('advertisement',' ')
+    summary1=summary111.replace('Advertisement',' ')
+    blob=TextBlob(summary1)
+    polarity = blob.sentiment.polarity
+    if polarity> 0.02 and polarity !=0:
+        senti = "Positive"
+    elif polarity< 0.03 and polarity !=0:
+        senti = "Negative"
+    else:
+        senti = "Neutral"
+
+    return summary1+"999"+senti
 
 
 

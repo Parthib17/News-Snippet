@@ -14,4 +14,22 @@
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/roboto1</item>
     </style>
+
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">9dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="custom_cardView_style" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_cardView</item>
+    </style>
+
+    <style name="custom_cardView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">48dp</item>
+        <item name="cornerSizeTopLeft">48dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
 </resources>

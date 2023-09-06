@@ -7,42 +7,38 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <HorizontalScrollView
         android:layout_margin="6dp"
         android:layout_width="match_parent"
+        android:scrollbars="none"
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn_3"
                 android:text="general"
                 android:textSize="14sp"
+                android:background="@drawable/round_outline"
                 android:padding="6dp"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
 
-            <Button
-                android:id="@+id/btn_2"
-                android:text="entertainment"
-                android:textSize="14sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
-            </Button>
             <Button
                 android:id="@+id/btn_1"
                 android:text="business"
                 android:textSize="14sp"
                 android:padding="6dp"
+                android:background="@drawable/round_outline"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
 
@@ -51,40 +47,58 @@
                 android:text="health"
                 android:textSize="14sp"
                 android:padding="6dp"
+                android:background="@drawable/round_outline"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
 
             <Button
                 android:id="@+id/btn_5"
                 android:text="science"
+                android:background="@drawable/round_outline"
                 android:textSize="14sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
+
             <Button
                 android:id="@+id/btn_6"
                 android:text="sports"
+                android:background="@drawable/round_outline"
                 android:textSize="14sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
+
+            <Button
+                android:id="@+id/btn_2"
+                android:text="entertainment"
+                android:textSize="14sp"
+                android:padding="6dp"
+                android:background="@drawable/round_outline"
+                android:layout_margin="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </Button>
+
             <Button
                 android:id="@+id/btn_7"
                 android:text="technology"
                 android:textSize="14sp"
                 android:padding="6dp"
+                android:background="@drawable/round_outline"
                 android:layout_margin="6dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
             </Button>
         </LinearLayout>
@@ -93,8 +107,10 @@
     <androidx.cardview.widget.CardView
         android:layout_margin="14dp"
         app:cardElevation="8dp"
+        app:cardCornerRadius="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
             app:defaultQueryHint="Search news in general category"
@@ -105,12 +121,58 @@
         </androidx.appcompat.widget.SearchView>
     </androidx.cardview.widget.CardView>
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_layout"
+                android:layout_width="411dp"
+                android:layout_height="12dp">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+            <include layout="@layout/shimmer_layout">
+
+            </include>
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone"
         android:id="@+id/recycler_main"
         android:layout_margin="8dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 </LinearLayout>

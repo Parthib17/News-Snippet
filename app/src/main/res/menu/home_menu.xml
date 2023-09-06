@@ -5,13 +5,21 @@
 
     <item
         android:id="@+id/about_us"
-        android:title="About Us">
-    </item>
+        android:title="About Us"></item>
     <item
-        android:title="refresh"
-        android:id="@+id/refresh"
-        android:icon="@drawable/ic_baseline_refresh_24"
-        app:showAsAction="ifRoom"
-        android:orderInCategory="100">
-    </item>
+        android:id="@+id/sign_out"
+        android:title="Sign out"></item>
+
+    <item
+        android:id="@+id/favourite"
+        android:title="Favourite"
+        android:icon="@drawable/favourite_white"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/summarizer"
+        android:title="Summarizer"
+        android:icon="@drawable/ic_summary"
+        app:showAsAction="ifRoom"></item>
+
+
 </menu>

@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.newsapp.Models.NewsHeadlines;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -37,11 +37,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         holder.text_title.setText(headlines.get(position).getTitle());
         holder.text_source.setText(headlines.get(position).getSource().getName());
+        //holder.text_source.setText("BBC NEWS");
 
-        if (headlines.get(position).getUrlToImage()!=null){
-            Picasso.get().load(headlines.get(position).getUrlToImage()).into(holder.img_headline);
 
-        }
+        //holder.img_headline.setImageResource(headlines.get(position).getUrlToImage());
+        //Picasso.get().load(headlines.get(position).getUrlToImage()).into(holder.img_headline);
+        Glide.with(context).load(headlines.get(position).getUrlToImage()).into(holder.img_headline);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,8 +52,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     }
 
+
     @Override
     public int getItemCount() {
         return headlines.size();
     }
+
 }
+
+
