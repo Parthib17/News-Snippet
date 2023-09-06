@@ -43,3 +43,17 @@ Add to Favourite feature allows users to bookmark user’s favorite news article
 ![Picture17](https://github.com/Parthib17/News-Snippet/assets/89259328/7d7dac07-2cba-4691-9fb8-85a9a8348201)
 ![Picture16](https://github.com/Parthib17/News-Snippet/assets/89259328/3e2a19fc-7371-4241-8d55-901a9dde0eba)
 
+#Searching
+
+![Picture19](https://github.com/Parthib17/News-Snippet/assets/89259328/94af12e2-2f14-42d7-9a78-e11260197ad7)
+
+#Conclusion
+In conclusion, the News Snippet application has been successfully developed to provide users with a convenient and efficient news browsing experience. With its user-friendly interface, article summarization feature, and diverse news categories, the app aims to streamline the process of staying informed.   
+
+Looking ahead, there are several future updates that can enhance the application even further. One potential update is the integration of natural language processing (NLP) techniques to improve the quality of the article summarization. This could involve incorporating advanced algorithms and models to generate more accurate and comprehensive summaries.
+
+Furthermore, continuous updates and improvements to the user interface, search functionality, and performance optimization can ensure a seamless and satisfying user experience. By embracing emerging technologies and user feedback, the News Snippet app has the potential to become a go-to platform for convenient, personalized, and comprehensive news consumption.
+
+Overall, the News Snippet application has laid a strong foundation for delivering relevant and concise news summaries. With future updates and enhancements, the app can evolve to meet the evolving needs of users and provide an even more enriching news browsing experience.
+
+
