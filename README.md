@@ -16,13 +16,13 @@
 ![Picture8](https://github.com/Parthib17/News-Snippet/assets/89259328/3fbb3179-952e-4baf-9cd1-742f05f666d1)
 ![Picture7](https://github.com/Parthib17/News-Snippet/assets/89259328/557299db-5271-47ae-b55b-9517dda378cb)
 
-#News Summary Display
+# News Summary Display
 ![Picture15](https://github.com/Parthib17/News-Snippet/assets/89259328/5fc7de07-aee7-4c73-bb9e-8de5cbf5ff8d)
 
-#Article Summarizer 
+# Article Summarizer 
 ![Picture18](https://github.com/Parthib17/News-Snippet/assets/89259328/745a830d-8451-4a60-8985-cfe5964eed01)
 
-#Add to Favourite
+# Add to Favourite
 ![Picture17](https://github.com/Parthib17/News-Snippet/assets/89259328/7d7dac07-2cba-4691-9fb8-85a9a8348201)
 ![Picture16](https://github.com/Parthib17/News-Snippet/assets/89259328/3e2a19fc-7371-4241-8d55-901a9dde0eba)
 
