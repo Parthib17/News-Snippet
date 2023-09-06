@@ -17,6 +17,7 @@ News Summarization Android Application using NLP
 ![Picture1](https://github.com/Parthib17/News-Snippet/assets/89259328/41c96188-04fc-4c69-83ae-228409ffd2ca)
 ![Picture3](https://github.com/Parthib17/News-Snippet/assets/89259328/fd4eb051-bea9-4dc4-a373-23c054ee11d1)
 ![Picture2](https://github.com/Parthib17/News-Snippet/assets/89259328/8f28b9de-585a-4952-ab96-3d1fcca60227)
+![5](https://github.com/Parthib17/News-Snippet/assets/89259328/30e58e3d-e719-422b-9f20-65fd36166278)
 
 
 # News Categories
