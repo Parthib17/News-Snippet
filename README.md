@@ -1,5 +1,4 @@
 # News-Snippet
-
 News Summarization Android Application using NLP
 ●	Developed an app that provides summaries of news articles using the SpaCy NLP library.
 ●	Utilized the News API to retrieve news articles from various categories.
