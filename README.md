@@ -1,11 +1,8 @@
 # News-Snippet
-News Summarization Android Application using NLP
-●	Developed an app that provides summaries of news articles using the SpaCy NLP library.
-
+News Summarization Android Application using NLP \n
+●	Developed an app that provides summaries of news articles using the SpaCy NLP library. \n
 ●	Utilized the News API to retrieve news articles from various categories.
-
 ●	Implemented news bookmark feature using Room Database and Firebase database to authenticate the users.
-
 ●	Tech: Android Studio, Java, Python, Spacy, Chaquopy, retrofit for API call, Firebase , Room Database.
 
 # Login & Sign Up
