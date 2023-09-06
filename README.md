@@ -14,39 +14,47 @@ News Summarization Android Application using NLP
 
 # Login & Sign Up
 
-![Picture1](https://github.com/Parthib17/News-Snippet/assets/89259328/41c96188-04fc-4c69-83ae-228409ffd2ca)
-![Picture3](https://github.com/Parthib17/News-Snippet/assets/89259328/fd4eb051-bea9-4dc4-a373-23c054ee11d1)
-![Picture2](https://github.com/Parthib17/News-Snippet/assets/89259328/8f28b9de-585a-4952-ab96-3d1fcca60227)
-![5](https://github.com/Parthib17/News-Snippet/assets/89259328/30e58e3d-e719-422b-9f20-65fd36166278)
+![Picture2](https://github.com/Parthib17/News-Snippet/assets/89259328/034fc1cb-6ab1-4e0f-af58-13ad65449d31)
+![Picture1](https://github.com/Parthib17/News-Snippet/assets/89259328/ffb7ce65-4e4c-40c1-8c01-21ec8589b8d5)
+![Picture3](https://github.com/Parthib17/News-Snippet/assets/89259328/367f6b51-53f9-4ab3-893f-4b6d170baa7c)
+![5](https://github.com/Parthib17/News-Snippet/assets/89259328/ed7b01e6-7d22-4126-8143-cdff1588491d)
+
 
 
 # News Categories
 
-![Picture6](https://github.com/Parthib17/News-Snippet/assets/89259328/2169f0e1-da40-417b-8411-3032045d4c5c)
-![Picture5](https://github.com/Parthib17/News-Snippet/assets/89259328/4b69fb17-be5e-4557-a505-63c40b485c4a)
-![Picture4](https://github.com/Parthib17/News-Snippet/assets/89259328/37bbeec5-2b5b-47af-97ee-83b61668c61d)
-![Picture10](https://github.com/Parthib17/News-Snippet/assets/89259328/515f20ef-f2b2-4316-ac1c-8433024ecb8e)
-![Picture9](https://github.com/Parthib17/News-Snippet/assets/89259328/c5827629-f4b3-4fc4-a746-872b4ea0860a)
-![Picture8](https://github.com/Parthib17/News-Snippet/assets/89259328/3fbb3179-952e-4baf-9cd1-742f05f666d1)
-![Picture7](https://github.com/Parthib17/News-Snippet/assets/89259328/557299db-5271-47ae-b55b-9517dda378cb)
+![Picture6](https://github.com/Parthib17/News-Snippet/assets/89259328/cda2b0cc-7d89-4c90-897b-d08886aaf560)
+![Picture5](https://github.com/Parthib17/News-Snippet/assets/89259328/7995da04-9f8a-4632-9f22-1031451560d6)
+![Picture4](https://github.com/Parthib17/News-Snippet/assets/89259328/13607455-2d9c-4878-a116-96e6d48d64b0)
+![Picture10](https://github.com/Parthib17/News-Snippet/assets/89259328/4d246a03-9b27-46ff-ba32-9caaf0a4e1ce)
+![Picture9](https://github.com/Parthib17/News-Snippet/assets/89259328/3cb96ba1-b88d-4952-87fa-8677c4307c7b)
+![Picture8](https://github.com/Parthib17/News-Snippet/assets/89259328/fea43f0d-b335-4877-a7eb-9286bb8440d8)
+![Picture7](https://github.com/Parthib17/News-Snippet/assets/89259328/148d5519-2363-4ddc-a0b7-e05a5d321aed)
+
 
 # News Summary Display
-![Picture15](https://github.com/Parthib17/News-Snippet/assets/89259328/5fc7de07-aee7-4c73-bb9e-8de5cbf5ff8d)
+
+![Picture15](https://github.com/Parthib17/News-Snippet/assets/89259328/471c18ea-694a-4066-81ad-e4803e0ff40c)
+![Picture20](https://github.com/Parthib17/News-Snippet/assets/89259328/64cab42b-fa8c-433e-986a-740f01fc6db8)
+
 
 # Article Summarizer 
 Article Summarizer Featrure allows users to conveniently paste the link of an external news source and generate a summary for that particular news.
 
-![Picture18](https://github.com/Parthib17/News-Snippet/assets/89259328/745a830d-8451-4a60-8985-cfe5964eed01)
+![Picture18](https://github.com/Parthib17/News-Snippet/assets/89259328/1aac77a6-65fb-4a5a-ba4b-4e2389785129)
+
 
 # Add to Favourite
 Add to Favourite feature allows users to bookmark user’s favorite news articles for quick and convenient access in the Favorites section of the app.
 
-![Picture17](https://github.com/Parthib17/News-Snippet/assets/89259328/7d7dac07-2cba-4691-9fb8-85a9a8348201)
-![Picture16](https://github.com/Parthib17/News-Snippet/assets/89259328/3e2a19fc-7371-4241-8d55-901a9dde0eba)
+![Picture17](https://github.com/Parthib17/News-Snippet/assets/89259328/bffaa764-a2d5-4e3e-b118-fd50ba9b2590)
+![Picture16](https://github.com/Parthib17/News-Snippet/assets/89259328/17558073-a08c-4365-a02e-a1a731f27d24)
+
 
 # Searching
 
-![Picture19](https://github.com/Parthib17/News-Snippet/assets/89259328/94af12e2-2f14-42d7-9a78-e11260197ad7)
+![Picture19](https://github.com/Parthib17/News-Snippet/assets/89259328/22be008e-5cf3-41e1-ba6b-06cfafdb8380)
+
 
 # Conclusion
 
